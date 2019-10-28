@@ -82,7 +82,7 @@ control <- trainControl(method="repeatedcv", number=3, repeats=3)
 #seed <- 4150
 metric <- "Accuracy"
 
-### C5.0 ###
+### rpart ###
 fit.rpart <- train(vec2~., data=trainSplit, method="rpart", metric=metric, trControl=control)
 ### Testing C50 ####
 rpartPred<-predict(fit.rpart,testSplit)
